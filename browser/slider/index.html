@@ -31,5 +31,20 @@
       </div>
     </div>
   </section>
+  <script>
+      const img = document.getElementById('slider');
+      const path = 'https://netology-code.github.io/hj-homeworks/browser/slider/i/';
+      const imgNames = ['airmax-jump', 'airmax-on-foot', 'airmax-playground', 'airmax-top-view', 'airmax'];
+      let i = -1;
+
+      function changeImage() {
+          i += 1;
+          img.src = path + imgNames[i] + '.png';
+          if (i === imgNames.length - 1) {
+              i = -1;
+          }
+      }
+      setInterval(changeImage, 1000);
+  </script>
 </body>
 </html>
